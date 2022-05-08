@@ -1,0 +1,57 @@
+.QrCode {
+    display: flex;
+    flex-direction: column;
+    transition: height .4s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: .5rem;
+    padding: 1rem;
+    max-height: 70vh;
+}
+
+.QrCode__input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.QrCode__input label {
+    font-weight: 600;
+}
+
+.QrCode__input input{
+    border: none;
+    height: 2rem;
+    border-bottom: .1rem solid var(--gray);
+    outline: none;
+    font-size: 1rem;
+}
+
+.QrCode__share {
+    width: 10rem;
+    height: 3rem;
+    margin: 1.5rem auto 0 auto;
+    border: none;
+    background-color: var(--gray);
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: gray;
+    transition: .3s all ease;
+}
+
+.QrCode__share.active {
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

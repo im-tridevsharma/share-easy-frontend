@@ -1,0 +1,50 @@
+.Toaster {
+    position:fixed;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: 700;
+    transition: all .4s linear;
+    z-index: 999999;
+}
+
+.Toaster__success {
+    background: rgb(109, 202, 109);
+}
+
+.Toaster__error {
+    background: rgb(202, 109, 109);
+}
+
+.Toaster__warning {
+    background: rgb(200, 202, 109);
+}
+
+.Toaster__right_bottom {
+    bottom: .5rem;
+    right: -100%;
+}
+
+.Toaster__right_top {
+    top: .5rem;
+    right: -100%;;
+}
+
+.Toaster__left_bottom {
+    bottom: .5rem;
+    left: -100%;;
+}
+
+.Toaster__left_top {
+    top: .5rem;
+    left: -100%;;
+}
+
+.Toaster__left_top.active, 
+.Toaster__left_bottom.active {
+    left: .5rem;
+}
+
+.Toaster__right_top.active,
+.Toaster__right_bottom.active {
+    right: .5rem;
+}

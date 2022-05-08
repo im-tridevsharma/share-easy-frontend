@@ -1,0 +1,50 @@
+
+.Downloader {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Downloader__btn {
+    width: 10rem;
+    height: 3rem;
+    margin: 1.5rem auto;
+    border: none;
+    background-color: var(--gray);
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: gray;
+    transition: .3s all ease;
+}
+
+.Downloader__btn.active {
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.Downloader__input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.Downloader__input span {
+    font-size: .9rem;
+    color: var(--primary-color);
+}
+
+.Downloader__input label {
+    font-weight: 600;
+}
+
+.Downloader__input input {
+    border: none;
+    height: 2rem;
+    border-bottom: .1rem solid var(--gray);
+    outline: none;
+    font-size: 1rem;
+}

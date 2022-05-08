@@ -1,0 +1,106 @@
+.Paste {
+    display: flex;
+    flex-direction: column;
+    transition: height .4s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: .5rem;
+    padding: 1rem;
+    max-height: 70vh;
+}
+
+.Paste__input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.Paste__input label {
+    font-weight: 600;
+}
+
+.Paste__input textarea {
+    border: none;
+    border-bottom: .1rem solid var(--gray);
+    outline: none;
+    min-height: 8.5rem;
+    max-height: 18rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    resize: vertical;
+}
+
+.Paste__share {
+    width: 10rem;
+    height: 3rem;
+    margin: 1.5rem auto 0 auto;
+    border: none;
+    background-color: var(--gray);
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: gray;
+    transition: .3s all ease;
+}
+
+.Paste__share.active {
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.Paste__option {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    color: rgb(66, 64, 64);
+    cursor: pointer;
+}
+
+.Paste__option_check {
+    width: 1.3rem;
+    height: 1.3rem;
+    border: 2px solid var(--secondary-color);
+    margin-right: .5rem;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.Paste__option_check::before {
+    position: absolute;
+    content: '✔';
+    color: var(--primary-color);
+    top: -.2rem;
+    left: .1rem;
+    font-size: 1rem;
+    transform: scale(0);
+    transition: all .2s linear;
+}
+
+.Paste__option input:checked+.Paste__option_check::before {
+    transform: scale(1);
+}
+
+.Paste__input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.Paste__input input {
+    border: none;
+    height: 2rem;
+    border-bottom: .1rem solid var(--gray);
+    outline: none;
+    font-size: 1rem;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

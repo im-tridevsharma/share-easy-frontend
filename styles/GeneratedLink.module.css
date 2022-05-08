@@ -1,0 +1,46 @@
+.GeneratedLink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background: #fff;
+}
+
+.GeneratedLink__message {
+    font-size: 1.3rem;
+}
+
+.GeneratedLink__close {
+    position: absolute;
+    width: 1.2rem;
+    right: .2rem;
+    top: .2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.GeneratedLink__link_copied {
+    color: rgb(15, 161, 15);
+}
+
+.GeneratedLink__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 600;
+}
+
+
+.GeneratedLink__link svg:first-child{
+    width: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}

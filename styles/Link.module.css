@@ -1,0 +1,59 @@
+.Link {
+    display: flex;
+    flex-direction: column;
+    transition: height .4s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: .5rem;
+    padding: 1rem;
+    max-height: 70vh;
+}
+
+.Link__input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.Link__input label {
+    font-weight: 600;
+}
+
+.Link__input textarea {
+    border: none;
+    border-bottom: .1rem solid var(--gray);
+    outline: none;
+    min-height: 8.5rem;
+    max-height: 18rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    resize: vertical;
+}
+
+.Link__share {
+    width: 10rem;
+    height: 3rem;
+    margin: 1.5rem auto 0 auto;
+    border: none;
+    background-color: var(--gray);
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: gray;
+    transition: .3s all ease;
+}
+
+.Link__share.active {
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

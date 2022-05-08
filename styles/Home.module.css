@@ -1,116 +1,109 @@
-.container {
-  padding: 0 2rem;
+
+.App_title {
+    font-family: "Monoton", cursive;
+    color: var(--primary-color);
+    position: absolute;
+    left: 2rem;
+    bottom: 0rem;
+    font-size: 2rem;
+    line-height: 0;
+    animation: appear-bottom .4s linear;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.App_logo {
+    position: absolute;
+    color:var(--primary-color);
+    position: absolute;
+    left: 2rem;
+    top: 1.2rem;
+    font-size: 1rem;
+    line-height: 0;
+    cursor: pointer;
+    animation: appear .4s linear;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.App_logo_img {
+    opacity: 1;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+
+.App_logo h1{
+    font-family: "Monoton",
+    cursive;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.App_action {
+    position: absolute;
+    left: 5rem;
+    top: 8rem;
+    border-radius: .5rem;
+    min-width: 20rem;
+    background-color: #fff;
+    animation: fade .4s linear;
+    overflow: hidden;
+    height: auto;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.App_navigation{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.App_actions {
+    color: var(--secondary-color);
+    position: absolute;
+    left: 28rem;
+    top: 7.5rem;
 }
 
-.title,
-.description {
-  text-align: center;
+.App_actions > p {
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: all .4s ease;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.App_actions p svg {
+   width: 1.2rem;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.App_actions p:hover,.App_actions p.active {
+    background-color: var(--primary-color);
+    color: #fff;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+@keyframes appear {
+    from {
+        left: -2rem;
+    }
+
+    to {
+        left: 2rem;
+    }
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+@keyframes appear-bottom {
+    from {
+        bottom: -2rem;
+    }
+
+    to {
+        bottom: 0rem;
+    }
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
-}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+    to {
+        opacity: 1;
+    }
 }

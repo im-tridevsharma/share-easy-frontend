@@ -1,0 +1,71 @@
+.NoteViewer {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.NoteViewer__btn {
+    width: 10rem;
+    height: 3rem;
+    margin: 1.5rem auto;
+    border: none;
+    background-color: var(--gray);
+    border-radius: 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: gray;
+    transition: .3s all ease;
+}
+
+.NoteViewer__btn.active {
+    background-color: var(--secondary-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.NoteViewer__input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.NoteViewer__input span {
+    font-size: .9rem;
+    color: var(--primary-color);
+}
+
+.NoteViewer__input label {
+    font-weight: 600;
+}
+
+.NoteViewer__input input {
+    border: none;
+    height: 2rem;
+    border-bottom: .1rem solid var(--gray);
+    outline: none;
+    font-size: 1rem;
+}
+
+.NoteViewer__viewbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 3rem;
+    background: #fff;
+    z-index: 99999;
+}
+
+.NoteViewer__close {
+    position: absolute;
+    width: 1.2rem;
+    right: 1rem;
+    top: 1rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
