@@ -41,36 +41,46 @@ function FileHandler({ fileInfo, token }) {
 }
 
 export async function getServerSideProps({ query }) {
-  if (query?.id) {
-    const res = await getFile(base_url + query?.id);
-    if (res?.msg) {
-      return {
-        redirect: {
-          permanent: false,
-          destination: "/",
-        },
-        props: {},
-      };
-    }
+  try {
+    if (query?.id) {
+      const res = await getFile(base_url + query?.id);
+      if (res?.msg) {
+        return {
+          redirect: {
+            permanent: false,
+            destination: "/",
+          },
+          props: { fileInfo: "" },
+        };
+      }
 
-    if (res?.file?.fileType === "url") {
-      return {
-        redirect: {
-          permanent: false,
-          destination: res?.file?.fileName,
-        },
-        props: {},
-      };
+      if (res?.file?.fileType === "url") {
+        return {
+          redirect: {
+            permanent: false,
+            destination: res?.file?.fileName || base_url,
+          },
+          props: {},
+        };
+      } else {
+        return {
+          props: {
+            fileInfo: res?.file || null,
+            token: res?.token || "",
+          },
+        };
+      }
     } else {
       return {
-        props: {
-          fileInfo: res?.file,
-          token: res?.token || "",
-        },
+        props: { fileInfo: "" },
       };
     }
-  } else {
+  } catch (err) {
     return {
+      redirect: {
+        permanent: false,
+        destination: "/",
+      },
       props: {},
     };
   }
