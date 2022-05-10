@@ -16,7 +16,7 @@ function FileHandler({ fileInfo, token }) {
     if (!fileInfo) {
       router.push("/");
     }
-  }, []);
+  }, [fileInfo]);
 
   return (
     <>

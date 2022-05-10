@@ -7,14 +7,14 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" type="image/png" href="favicon.png" />
-        <Script
-          id="Adsense-id"
-          data-ad-client="ca-pub-4888538539035804"
-          async="true"
-          strategy="beforeInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-        />
       </Head>
+      <Script
+        id="Adsense-id"
+        data-ad-client="ca-pub-4888538539035804"
+        async="true"
+        strategy="beforeInteractive"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
       <Component {...pageProps} />;
     </>
   );
