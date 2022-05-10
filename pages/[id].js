@@ -11,6 +11,13 @@ import NoteViewer from "../components/NoteViewer";
 
 function FileHandler({ fileInfo, token }) {
   const router = useRouter();
+
+  React.useEffect(() => {
+    if (!fileInfo) {
+      router.push("/");
+    }
+  }, []);
+
   return (
     <>
       <Head>
@@ -44,13 +51,14 @@ export async function getServerSideProps({ query }) {
   try {
     if (query?.id) {
       const res = await getFile(base_url + query?.id);
+
       if (res?.msg) {
         return {
           redirect: {
             permanent: false,
             destination: "/",
           },
-          props: { fileInfo: "" },
+          props: {},
         };
       }
 
@@ -58,7 +66,7 @@ export async function getServerSideProps({ query }) {
         return {
           redirect: {
             permanent: false,
-            destination: res?.file?.fileName || base_url,
+            destination: res?.file?.fileName || base_url.replace(":8443", ""),
           },
           props: {},
         };
@@ -66,14 +74,10 @@ export async function getServerSideProps({ query }) {
         return {
           props: {
             fileInfo: res?.file || null,
-            token: res?.token || "",
+            token: res?.token || null,
           },
         };
       }
-    } else {
-      return {
-        props: { fileInfo: "" },
-      };
     }
   } catch (err) {
     return {
@@ -81,7 +85,7 @@ export async function getServerSideProps({ query }) {
         permanent: false,
         destination: "/",
       },
-      props: {},
+      props: { fileInfo: "" },
     };
   }
 }

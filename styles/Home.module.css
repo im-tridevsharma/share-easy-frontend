@@ -11,7 +11,6 @@
 }
 
 .App_logo {
-    position: absolute;
     color:var(--primary-color);
     position: absolute;
     left: 2rem;
@@ -76,6 +75,51 @@
 .App_actions p:hover,.App_actions p.active {
     background-color: var(--primary-color);
     color: #fff;
+}
+
+@media screen and (max-width:530px) {
+    .App_logo, .App_title {
+        bottom: 5rem;
+        top: auto;
+        left: 1rem;
+    }
+
+    .App_title {
+        right: 1rem;
+        left: auto;
+        bottom: 4.5rem;
+    }
+}
+
+@media screen and (max-width:567px) {
+
+    .App_navigation {
+        justify-content: center;
+    }
+
+    .App_action {
+        left: 50%;
+        top: 22%;
+        transform: translate(-50%, -10%);
+        z-index: 999999999;
+    }
+
+    .App_actions {
+        width: 100%;
+        bottom: 0 !important;
+        left: 0;
+        top: auto;
+        display: flex;
+        z-index: 9999;
+        justify-content: space-around;
+        background-color: #fff;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    .App_actions>p{
+        background-color: rgba(0, 0, 0, .1);
+    }
 }
 
 @keyframes appear {
