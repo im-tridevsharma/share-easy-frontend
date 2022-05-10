@@ -37,6 +37,10 @@ const HomePage = () => {
         <h1>SE</h1>
       </div>
 
+      <div className={styles.App_navigation}>
+        <Navigation />
+      </div>
+
       <div className={styles.App_action}>
         {action === "file" && <UploadFile />}
         {action === "link" && <Link />}
@@ -71,10 +75,6 @@ const HomePage = () => {
             <FontAwesomeIcon icon={faQrcode} />
           </p>
         )}
-      </div>
-
-      <div className={styles.App_navigation}>
-        <Navigation />
       </div>
 
       <div className={styles.App_ads}>
