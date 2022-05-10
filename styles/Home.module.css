@@ -81,6 +81,10 @@
     .App_navigation{
         font-size: .8rem!important;
     }
+
+    .App_action {
+        margin: 10%;
+    }
 }
 
 @media screen and (max-width:567px) {
@@ -107,7 +111,7 @@
 
     .App_actions {
        position: fixed;
-       bottom: 4rem;
+       bottom: 0rem;
         border-top-left-radius: 1rem;
         border-top-right-radius: 1rem;
         left: 0;
