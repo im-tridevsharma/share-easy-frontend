@@ -18,6 +18,15 @@ function FileHandler({ fileInfo, token }) {
     }
   }, [fileInfo]);
 
+  React.useEffect(() => {
+    var ads = document.getElementsByClassName("adsbygoogle").length;
+    for (var i = 0; i < ads; i++) {
+      try {
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      } catch (e) {}
+    }
+  }, []);
+
   return (
     <>
       <Head>
@@ -28,6 +37,10 @@ function FileHandler({ fileInfo, token }) {
         <h1>SE</h1>
       </div>
 
+      <div className={styles.App_navigation}>
+        <Navigation />
+      </div>
+
       <div className={styles.App_action}>
         {fileInfo?.fileType === "text" ? (
           <NoteViewer fileinfo={fileInfo} />
@@ -36,8 +49,15 @@ function FileHandler({ fileInfo, token }) {
         )}
       </div>
 
-      <div className={styles.App_navigation}>
-        <Navigation />
+      <div className={styles.App_ads}>
+        <ins
+          className="adsbygoogle"
+          style={{ display: "block" }}
+          data-ad-client="ca-pub-4888538539035804"
+          data-ad-slot="4356688961"
+          data-ad-format="auto"
+          data-full-width-responsive="true"
+        ></ins>
       </div>
 
       <div className={styles.App_title}>

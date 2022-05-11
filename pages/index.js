@@ -34,7 +34,7 @@ const HomePage = () => {
       </Head>
 
       <div className={styles.App_logo}>
-        <h1>SE</h1>
+        <img src="/favicon.png" alt="share easy" height="80" /> <h1>SE</h1>
       </div>
 
       <div className={styles.App_navigation}>

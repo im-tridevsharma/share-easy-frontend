@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" type="image/png" href="favicon.png" />
+        <meta name="image" content="/favicon.png" />
       </Head>
       <Script
         id="Adsense-id"

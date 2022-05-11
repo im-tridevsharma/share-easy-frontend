@@ -19,6 +19,9 @@
     line-height: 0;
     cursor: pointer;
     animation: appear .4s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .App_logo_img {
@@ -77,6 +80,16 @@
     color: #fff;
 }
 
+.App_ads {
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 300px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
 @media screen and (max-width:350px) {
     .App_navigation{
         font-size: .8rem!important;
@@ -89,6 +102,11 @@
 
 @media screen and (max-width:567px) {
     
+    .App_ads {
+        right: 50%;
+        transform: translate(50%);
+    }
+
     .App_logo {
         position: relative;
         text-align: center;
@@ -125,6 +143,14 @@
 
     .App_actions>p{
         background-color: rgba(0, 0, 0, .1);
+    }
+
+    .App_title {
+        bottom: 1rem;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        display: block;
     }
 }
 
