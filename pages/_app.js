@@ -2,12 +2,15 @@ import "../styles/globals.css";
 import Head from "next/head";
 import Script from "next/script";
 
+import favicon from "../public/favicon.png";
+
 function MyApp({ Component, pageProps }) {
+  console.log(favicon);
   return (
     <>
       <Head>
-        <link rel="icon" type="image/png" href="favicon.png" />
-        <meta name="image" content="/favicon.png" />
+        <link rel="icon" type="image/png" href={favicon?.src} />
+        <meta name="image" content={favicon?.src} />
       </Head>
       <Script
         id="Adsense-id"
@@ -16,7 +19,7 @@ function MyApp({ Component, pageProps }) {
         strategy="beforeInteractive"
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
       />
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </>
   );
 }

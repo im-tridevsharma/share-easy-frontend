@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+
+.Login__container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: rgba(0, 0, 0, .6);
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.Login__header {
+    padding: 0rem 1rem;
+    background: #fff;
+    font-family: 'Abril Fatface', cursive;
+    border-top: .2rem solid var(--primary-color);
+    transition: all .3s ease;
+}
+
+.Login__header h1 {
+    letter-spacing: 10px;
+    text-align: center;
+    transition: all .3s ease;
+    line-height: 12px;
+}
+
+.Login__header:hover {
+    border-top-color: #fff;
+}
+
+.Login__header h1:hover {
+    color: var(--primary-color);
+}
+
+.Login__form {
+    max-width: 400px;
+    width: 100%;
+    margin: 10% auto;
+    background-color: #fff;
+    padding: 2rem 3rem;
+}
+
+.Login__form_input {
+    margin: .5rem 0rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Login__form_input input {
+    height: 2.5rem;
+    margin-top: .2rem;
+    border: 1px solid lightslategray;
+    padding: 0 .5rem;
+    outline: none;
+}
+
+.Login__form_input button {
+    margin-top: 1rem;
+    padding: .7rem;
+    background: var(--primary-color);
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all .4s ease;
+}
+
+.Login__form_input button:hover {
+    background:var(--secondary-color);
+}
