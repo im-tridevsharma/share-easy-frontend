@@ -9,6 +9,8 @@ import Downloader from "../components/Downloader";
 import { useRouter } from "next/router";
 import NoteViewer from "../components/NoteViewer";
 
+import logo from "../public/favicon.png";
+
 function FileHandler({ fileInfo, token }) {
   const router = useRouter();
 
@@ -34,7 +36,7 @@ function FileHandler({ fileInfo, token }) {
       </Head>
 
       <div className={styles.App_logo} onClick={() => router.push("/")}>
-        <h1>SE</h1>
+        <img src={logo?.src} alt="share easy" height="80" /> <h1>SE</h1>
       </div>
 
       <div className={styles.App_navigation}>

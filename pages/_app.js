@@ -5,7 +5,6 @@ import Script from "next/script";
 import favicon from "../public/favicon.png";
 
 function MyApp({ Component, pageProps }) {
-  console.log(favicon);
   return (
     <>
       <Head>
@@ -19,7 +18,16 @@ function MyApp({ Component, pageProps }) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="HandheldFriendly" content="true" />
         <meta name="MobileOptimized" content="width" />
-        <meta name="theme-color" content="#FF4331" />
+        <meta
+          name="theme-color"
+          content="red"
+          media="(prefers-color-scheme: light)"
+        />
+        <meta
+          name="theme-color"
+          content="#FF4331"
+          media="(prefers-color-scheme: dark)"
+        />
         <link rel="apple-touch-icon" sizes="72x72" href={favicon?.src} />
         <link rel="apple-touch-icon" sizes="114x114" href={favicon?.src} />
         <link rel="apple-touch-icon" href={favicon?.src} />

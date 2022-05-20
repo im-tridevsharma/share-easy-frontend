@@ -1,8 +1,11 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React from "react";
 
 import styles from "../../styles/_cms/Login.module.css";
 import loader from "../../public/loading.gif";
+
+import logo from "../../public/favicon.png";
 
 function Login() {
   const [loginData, setLoginData] = React.useState({
@@ -10,10 +13,16 @@ function Login() {
     password: "",
   });
   const [loading, setLoading] = React.useState(false);
+  const router = useRouter();
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log(loginData);
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      router.push("/_cms/dashboard");
+    }, 1000);
   };
 
   return (
@@ -25,6 +34,9 @@ function Login() {
         <h1>CMS Login</h1>
       </div>
       <form className={styles.Login__form} onSubmit={handleLogin}>
+        <div className={styles.Login__logo}>
+          <img src={logo?.src} alt="share-easy" />
+        </div>
         <div className={styles.Login__form_input}>
           <label>Username</label>
           <input

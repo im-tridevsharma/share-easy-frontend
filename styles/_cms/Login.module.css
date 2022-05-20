@@ -41,6 +41,15 @@
     position: relative;
 }
 
+.Login__logo {
+    text-align: center;
+}
+
+.Login__logo img {
+    height: 5rem;
+    object-fit: contain;
+}
+
 .Login__form_input {
     margin: .5rem 0rem;
     display: flex;
