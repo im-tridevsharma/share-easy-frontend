@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="HandheldFriendly" content="true" />
         <meta name="MobileOptimized" content="width" />
         <meta name="theme-color" content="#FF4331" />
