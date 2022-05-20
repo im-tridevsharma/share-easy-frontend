@@ -11,6 +11,19 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="icon" type="image/png" href={favicon?.src} />
         <meta name="image" content={favicon?.src} />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="HandheldFriendly" content="true" />
+        <meta name="MobileOptimized" content="width" />
+        <meta name="theme-color" content="#FF4331" />
+        <link rel="apple-touch-icon" sizes="72x72" href={favicon?.src} />
+        <link rel="apple-touch-icon" sizes="114x114" href={favicon?.src} />
+        <link rel="apple-touch-icon" href={favicon?.src} />
+        <link rel="apple-touch-startup-image" href={favicon?.src} />
       </Head>
       <Script
         id="Adsense-id"

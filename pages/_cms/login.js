@@ -2,12 +2,14 @@ import Head from "next/head";
 import React from "react";
 
 import styles from "../../styles/_cms/Login.module.css";
+import loader from "../../public/loading.gif";
 
 function Login() {
   const [loginData, setLoginData] = React.useState({
     username: "",
     password: "",
   });
+  const [loading, setLoading] = React.useState(false);
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -46,8 +48,14 @@ function Login() {
         <div className={styles.Login__form_input}>
           <button>Login</button>
         </div>
+        {loading && (
+          <div className="loader">
+            <div className="loading">
+              <img src={loader?.src} />
+            </div>
+          </div>
+        )}
       </form>
-      <div className={styles.Login__footer}></div>
     </div>
   );
 }

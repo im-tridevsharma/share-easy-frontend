@@ -38,6 +38,7 @@
     margin: 10% auto;
     background-color: #fff;
     padding: 2rem 3rem;
+    position: relative;
 }
 
 .Login__form_input {
