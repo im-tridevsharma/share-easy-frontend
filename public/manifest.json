@@ -10,7 +10,7 @@
     ],
     "start_url" : "/",
     "background_color" : "#fff",
-    "display" : "fullscreen",
+    "display" : "standalone",
     "scope" : "/",
     "theme_color" : "#FF4331",
     "shortcuts" : [

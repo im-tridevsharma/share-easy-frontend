@@ -10,3 +10,49 @@
     height: 100vh;
     width: 100%;
 }
+
+.Dashboard__container {
+    padding: 1rem;
+    height: calc(100vh - 65px);
+    overflow-y: auto;
+}
+
+.Dashboard__stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Dashboard__item {
+    background-color: rgba(255, 255, 255, .8);
+    width: calc(100% / 5 - 20px);
+    padding: 1rem;
+}
+
+.Dashboard__item  h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.Dashboard__item_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--primary-color);
+}
+
+.Dashboard__item_info p {
+    font-size: 2rem;
+    margin: 0;
+    font-family: 'Monoton', cursive;
+}
+
+@media screen and (max-width:900px){
+    .Dashboard__item {
+        width: 100%;
+    }
+
+    .Dashboard__stats {
+        flex-direction: column;
+    }
+}

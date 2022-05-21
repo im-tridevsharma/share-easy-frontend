@@ -1,0 +1,12 @@
+.Notes__wrapper {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.Notes__content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
