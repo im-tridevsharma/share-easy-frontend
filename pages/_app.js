@@ -10,6 +10,8 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <link rel="icon" type="image/png" href={favicon?.src} />
         <meta name="image" content={favicon?.src} />
+        <meta name="manifest" content="/manifest.json" />
+        <meta name="manifest" content="/site.webmanifest" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"

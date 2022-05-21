@@ -1,0 +1,26 @@
+{
+    "short_name": "Share Easy",
+    "name": "Share your files, links, notes eaisly and securely.",
+    "icons": [
+        {
+            "src": "favicon.png",
+        "type": "image/png",
+        "sizes": "192x192"
+        }
+    ],
+    "start_url" : "/",
+    "background_color" : "#fff",
+    "display" : "fullscreen",
+    "scope" : "/",
+    "theme_color" : "#FF4331",
+    "shortcuts" : [
+        {
+            "name" : "CMS Login",
+            "short_name" : "CMS",
+            "description" : "Login to CMS",
+            "url" : "/_cms/login",
+            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+        }
+    ],
+    "description" : "Share Easy Your files and notes and short your links."
+}
