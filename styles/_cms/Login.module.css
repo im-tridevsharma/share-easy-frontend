@@ -41,6 +41,12 @@
     position: relative;
 }
 
+@media screen and (max-width:500px){
+    .Login__form {
+        margin: 30% auto;
+    }
+}
+
 .Login__logo {
     text-align: center;
 }

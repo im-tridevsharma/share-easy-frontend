@@ -61,6 +61,10 @@
     z-index: 99999;
 }
 
+.NoteViewer__viewbox pre {
+    font-size: 1.2rem;
+}
+
 .NoteViewer__close {
     position: absolute;
     width: 1.2rem;

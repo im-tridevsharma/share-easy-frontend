@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import Navigation from "../components/Navigation";
 import UploadFile from "../components/UploadFile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -34,7 +35,8 @@ const HomePage = () => {
       </Head>
 
       <div className={styles.App_logo}>
-        <img src="/favicon.png" alt="share easy" height="80" /> <h1>SE</h1>
+        <Image src="/logo.png" alt="share easy" width="80" height="80" />
+        <h1>SE</h1>
       </div>
 
       <div className={styles.App_navigation}>

@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Image from "next/image";
 import { getFile } from "../apis/common";
 import { base_url } from "../utils/_api";
 
@@ -36,7 +37,8 @@ function FileHandler({ fileInfo, token }) {
       </Head>
 
       <div className={styles.App_logo} onClick={() => router.push("/")}>
-        <img src={logo?.src} alt="share easy" height="80" /> <h1>SE</h1>
+        <Image src={logo?.src} alt="share easy" width="80" height="80" />
+        <h1>SE</h1>
       </div>
 
       <div className={styles.App_navigation}>

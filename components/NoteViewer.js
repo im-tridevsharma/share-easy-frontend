@@ -92,7 +92,7 @@ function NoteViewer({ fileinfo }) {
 
       {data && (
         <div className={styles.NoteViewer__viewbox}>
-          <div>{data}</div>
+          <pre>{data}</pre>
           <FontAwesomeIcon
             icon={faTimesCircle}
             className={styles.NoteViewer__close}

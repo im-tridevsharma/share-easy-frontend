@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/router";
 
 import styles from "../../styles/_cms/component/Sidebar.module.css";
@@ -21,11 +22,8 @@ function Sidebar() {
   return (
     <div className={styles.Sidebar__container}>
       <div className={styles.Sidebar__header}>
-        <img src={logo?.src} alt="share-easy" />
-        <h2>
-          Share
-          <br /> Easy
-        </h2>
+        <Image src={logo?.src} alt="share-easy" width="60" height="60" />
+        <h2>Share Easy</h2>
       </div>
       <ul className={styles.Sidebar__nav}>
         <li>
