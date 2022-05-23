@@ -10,3 +10,48 @@
     height: 100vh;
     width: 100%;
 }
+
+.Pages__container {
+    padding: 1rem;
+}
+
+.Pages__card {
+    padding: .5rem;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.Pages__card_header {
+    border-bottom: 2px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.Pages__card_header_action {
+    background-color: #fff;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Pages__card_header_action svg {
+    width: 1rem;
+    color: var(--primary-color);
+}
+
+.Pages__table {
+    width: 100%;
+    display: table;
+}
+
+.Pages__table thead {
+    font-family: 'Didact Gothic', sans-serif;
+    background: #fff;
+}
+
+.Pages__table thead tr th {
+    padding: .8rem 0;
+}

@@ -1,10 +1,8 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 import styles from "../../styles/_cms/component/Sidebar.module.css";
-import logo from "../../public/logo.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -22,8 +20,10 @@ function Sidebar() {
   return (
     <div className={styles.Sidebar__container}>
       <div className={styles.Sidebar__header}>
-        <Image src={logo?.src} alt="share-easy" width="60" height="60" />
-        <h2>Share Easy</h2>
+        <h2>
+          Share Easy{" "}
+          <small style={{ fontSize: ".5rem", lineHeight: 0 }}>CMS</small>
+        </h2>
       </div>
       <ul className={styles.Sidebar__nav}>
         <li>
@@ -44,7 +44,12 @@ function Sidebar() {
         <li>
           <Link href="/_cms/pages">
             <a
-              className={router?.asPath === "/_cms/pages" ? styles.active : ""}
+              className={
+                router?.asPath === "/_cms/pages" ||
+                router?.asPath === "/_cms/pages/add"
+                  ? styles.active
+                  : ""
+              }
             >
               <FontAwesomeIcon
                 icon={faPager}

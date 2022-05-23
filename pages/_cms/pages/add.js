@@ -1,15 +1,15 @@
 import Head from "next/head";
 import React from "react";
-import Header from "../../components/_cms/Header";
-import Sidebar from "../../components/_cms/Sidebar";
+import Header from "../../../components/_cms/Header";
+import Sidebar from "../../../components/_cms/Sidebar";
 
-import styles from "../../styles/_cms/Pages.module.css";
+import styles from "../../../styles/_cms/Pages.module.css";
 
-function Pages() {
+function AddPages() {
   return (
     <div className={styles.Pages__wrapper}>
       <Head>
-        <title>Pages | CMS</title>
+        <title>Add Pages | CMS</title>
       </Head>
       <Sidebar />
       <div className={styles.Pages__content}>
@@ -20,4 +20,4 @@ function Pages() {
   );
 }
 
-export default Pages;
+export default AddPages;

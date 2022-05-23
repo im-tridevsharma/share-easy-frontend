@@ -1,6 +1,6 @@
 {
-    "short_name": "Share Easy",
-    "name": "Share your files, links, notes eaisly and securely.",
+    "short_name": "ShareEasy",
+    "name": "Share Easy",
     "icons": [
         {
             "src": "favicon.png",
@@ -9,7 +9,7 @@
         }
     ],
     "start_url" : "/",
-    "background_color" : "#fff",
+    "background_color" : "#FF4331",
     "display" : "standalone",
     "scope" : "/",
     "theme_color" : "#FF4331",
@@ -19,6 +19,48 @@
             "short_name" : "CMS",
             "description" : "Login to CMS",
             "url" : "/_cms/login",
+            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+        },
+        {
+            "name" : "CMS Dashboard",
+            "short_name" : "CMS",
+            "description" : "Dashboard",
+            "url" : "/_cms/dashboard",
+            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+        },
+        {
+            "name" : "CMS Pages",
+            "short_name" : "CMS",
+            "description" : "Pages",
+            "url" : "/_cms/pages",
+            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+        },
+        {
+            "name" : "CMS Blogs",
+            "short_name" : "CMS",
+            "description" : "Blogs",
+            "url" : "/_cms/blogs",
+            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+        },
+        {
+            "name" : "CMS Files",
+            "short_name" : "CMS",
+            "description" : "Files",
+            "url" : "/_cms/files",
+            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+        },
+        {
+            "name" : "CMS Links",
+            "short_name" : "CMS",
+            "description" : "Links",
+            "url" : "/_cms/links",
+            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+        },
+        {
+            "name" : "CMS Notes",
+            "short_name" : "CMS",
+            "description" : "Notes",
+            "url" : "/_cms/notes",
             "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
         }
     ],
