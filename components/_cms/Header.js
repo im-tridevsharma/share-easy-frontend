@@ -16,11 +16,23 @@ function Header() {
   return (
     <div className={styles.Header__container}>
       <div className={styles.Header__logo}>
-        <Image src={logo?.src} alt="share-easy" width="60" height="60" />
+        <Image
+          src={logo?.src}
+          className={styles.Header__logo_img}
+          alt="share-easy"
+          width="60"
+          height="60"
+        />
         <h2>{title}</h2>
       </div>
       <div className={styles.Header__profile}>
-        <Image src={profile?.src} alt="profile" width="50" height="50" />
+        <Image
+          src={profile?.src}
+          className={styles.Header__logo_img}
+          alt="profile"
+          width="50"
+          height="50"
+        />
       </div>
     </div>
   );

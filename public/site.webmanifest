@@ -15,53 +15,25 @@
     "theme_color" : "#FF4331",
     "shortcuts" : [
         {
-            "name" : "CMS Login",
-            "short_name" : "CMS",
-            "description" : "Login to CMS",
-            "url" : "/_cms/login",
-            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
-        },
-        {
             "name" : "CMS Dashboard",
-            "short_name" : "CMS",
+            "short_name" : "Dashboard",
             "description" : "Dashboard",
             "url" : "/_cms/dashboard",
-            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+            "icons" : [{"src": "dashboard.png","type": "image/png","sizes": "192x192"}]
         },
         {
             "name" : "CMS Pages",
-            "short_name" : "CMS",
+            "short_name" : "Pages",
             "description" : "Pages",
             "url" : "/_cms/pages",
-            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+            "icons" : [{"src": "pages.png","type": "image/png","sizes": "192x192"}]
         },
         {
             "name" : "CMS Blogs",
-            "short_name" : "CMS",
+            "short_name" : "Blogs",
             "description" : "Blogs",
             "url" : "/_cms/blogs",
-            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
-        },
-        {
-            "name" : "CMS Files",
-            "short_name" : "CMS",
-            "description" : "Files",
-            "url" : "/_cms/files",
-            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
-        },
-        {
-            "name" : "CMS Links",
-            "short_name" : "CMS",
-            "description" : "Links",
-            "url" : "/_cms/links",
-            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
-        },
-        {
-            "name" : "CMS Notes",
-            "short_name" : "CMS",
-            "description" : "Notes",
-            "url" : "/_cms/notes",
-            "icons" : [{"src": "favicon.png","type": "image/png","sizes": "192x192"}]
+            "icons" : [{"src": "blogs.png","type": "image/png","sizes": "192x192"}]
         }
     ],
     "description" : "Share Easy Your files and notes and short your links."
