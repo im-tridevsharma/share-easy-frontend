@@ -10,13 +10,16 @@
 .Login__header {
     padding: 0rem 1rem;
     background: #fff;
-    font-family: 'Abril Fatface', cursive;
     border-top: .2rem solid var(--primary-color);
     transition: all .3s ease;
+    border-radius: 10rem;
+    max-width: 80%;
+    width: 100%;
+    margin: 1rem auto;
 }
 
 .Login__header h1 {
-    letter-spacing: 10px;
+    letter-spacing: 15px;
     text-align: center;
     transition: all .3s ease;
     line-height: 12px;
@@ -31,17 +34,32 @@
 }
 
 .Login__form {
-    max-width: 400px;
+    max-width: 350px;
     width: 100%;
     margin: 10% auto;
     background-color: #fff;
     padding: 2rem 3rem;
     position: relative;
+    border-radius: 1rem;
+    box-shadow: 2px -1px 100px 10px rgba(0, 0, 0, .6);
 }
 
 @media screen and (max-width:500px){
     .Login__form {
         margin: 30% auto;
+    }
+
+    .Login__header {
+        max-width: 90%;
+    }
+
+    .Login__header h1{
+        font-size: 1rem;
+    }
+
+    .Login__form {
+        max-width: 300px;
+        padding: 2rem;
     }
 }
 
@@ -63,7 +81,8 @@
 .Login__form_input input {
     height: 2.5rem;
     margin-top: .2rem;
-    border: 1px solid lightslategray;
+    border-radius: .5rem;
+    border: 1px solid rgb(207, 205, 205);
     padding: 0 .5rem;
     outline: none;
 }
@@ -76,6 +95,8 @@
     cursor: pointer;
     font-weight: 700;
     transition: all .4s ease;
+    border-radius: .5rem;
+    color: whitesmoke;
 }
 
 .Login__form_input button:hover {

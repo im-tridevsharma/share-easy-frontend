@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -16,7 +16,17 @@ import { faFile } from "@fortawesome/free-regular-svg-icons";
 
 function Sidebar() {
   const router = useRouter();
-  console.log(router.asPath);
+
+  useEffect(() => {
+    document
+      .querySelector(".Sidebar_active__Aqh0Z")
+      .scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+  }, [router?.asPath]);
+
   return (
     <div className={styles.Sidebar__container}>
       <div className={styles.Sidebar__header}>
