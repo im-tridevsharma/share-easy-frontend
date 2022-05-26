@@ -20,7 +20,7 @@ export const downloadFile = async (token, callback) => {
         Accept: "application/octet-stream",
       },
       responseType: "arraybuffer",
-      onUploadProgress: (e) => {
+      onDownloadProgress: (e) => {
         const progress = parseInt((e.loaded / e.total) * 100);
         callback(progress);
       },

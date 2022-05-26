@@ -5,7 +5,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     border-radius: .5rem;
-    height: auto;
+    height: max-content;
 }
 
 .UploadFile__con {

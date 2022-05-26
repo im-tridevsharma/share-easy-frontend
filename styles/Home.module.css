@@ -43,7 +43,7 @@
     background-color: #fff;
     animation: fade .4s linear;
     overflow: hidden;
-    height: auto;
+    height: max-content;
 }
 
 .App_navigation{
