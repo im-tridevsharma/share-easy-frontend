@@ -11,6 +11,7 @@ function Downloader({ token, fileinfo }) {
   const [password, setPassword] = React.useState("");
   const [isLoading, setIsLoading] = React.useState(false);
   const [isDone, setIsDone] = React.useState(false);
+  const [progress, setProgress] = React.useState(0);
 
   React.useState(() => {
     if (!fileinfo?.isProtected) {
@@ -28,7 +29,7 @@ function Downloader({ token, fileinfo }) {
           setWarning("");
         }, 1000);
       } else if (res?.token) {
-        const download = await downloadFile(res?.token);
+        const download = await downloadFile(res?.token, setProgress);
         const path = window.URL.createObjectURL(new Blob([download]));
         const link = document.createElement("a");
         link.href = path;
@@ -70,7 +71,9 @@ function Downloader({ token, fileinfo }) {
         active={warning !== ""}
         position="bottom-right"
       />
-      {(isLoading || isDone) && <Loader loading={isLoading} done={isDone} />}
+      {(isLoading || isDone) && (
+        <Loader progress={progress} loading={isLoading} done={isDone} />
+      )}
 
       <h2>Download Your File</h2>
       <p>{fileinfo?.fileName}</p>

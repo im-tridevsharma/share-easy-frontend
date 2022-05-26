@@ -8,7 +8,7 @@ export const shareFile = async (formData, callback) => {
         "Content-Type": "multipart/form-data",
       },
       onUploadProgress: (e) => {
-        const progress = (e.loaded / e.total) * 100;
+        const progress = parseInt((e.loaded / e.total) * 100);
         callback(progress);
       },
     });

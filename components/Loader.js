@@ -11,7 +11,7 @@ function Loader({ loading, done, progress }) {
         } ${done && !loading ? styles.done : ""}`}
       >
         {progress > 0 && (
-          <span className={styles.Loader__progress}>{progress}</span>
+          <span className={styles.Loader__progress}>{progress}%</span>
         )}
       </div>
     </div>

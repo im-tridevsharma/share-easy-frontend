@@ -10,7 +10,7 @@ export const getFile = async (url) => {
   }
 };
 
-export const downloadFile = async (token) => {
+export const downloadFile = async (token, callback) => {
   try {
     const res = await _api.get("getFile", {
       headers: {
@@ -20,6 +20,10 @@ export const downloadFile = async (token) => {
         Accept: "application/octet-stream",
       },
       responseType: "arraybuffer",
+      onUploadProgress: (e) => {
+        const progress = parseInt((e.loaded / e.total) * 100);
+        callback(progress);
+      },
     });
 
     return res?.data;
