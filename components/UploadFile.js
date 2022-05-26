@@ -22,6 +22,7 @@ function UploadFile() {
   const [isDone, setIsDone] = React.useState(false);
   const [link, setLink] = React.useState("");
   const [message, setMessage] = React.useState("");
+  const [progress, setProgress] = React.useState(0);
 
   const handleFileSelect = (e) => {
     const { files } = e.target;
@@ -70,7 +71,7 @@ function UploadFile() {
     formdata.append("isProtected", uploadData?.encryption);
     formdata.append("password", uploadData?.encryption_key);
 
-    const res = await shareFile(formdata);
+    const res = await shareFile(formdata, setProgress);
     if (res?.link) {
       setIsDone(true);
       setIsLoading(false);
@@ -81,9 +82,11 @@ function UploadFile() {
           "Congratulations! You have successfully uploaded your file."
         );
       }, 1000);
+      setProgress(0);
     } else {
       setWarning(res?.message);
       setIsLoading(false);
+      setProgress(0);
     }
   };
 
@@ -95,7 +98,9 @@ function UploadFile() {
         active={warning !== ""}
         position="bottom-right"
       />
-      {(isLoading || isDone) && <Loader loading={isLoading} done={isDone} />}
+      {(isLoading || isDone) && (
+        <Loader progress={progress} loading={isLoading} done={isDone} />
+      )}
       {link && (
         <GeneratedLink
           message={message}

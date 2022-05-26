@@ -37,7 +37,7 @@ function FileHandler({ fileInfo, token }) {
       </Head>
 
       <div className={styles.App_logo} onClick={() => router.push("/")}>
-        <Image src={logo?.src} alt="share easy" width="80" height="80" />
+        <Image src={logo?.src} alt="share easy" width="60" height="60" />
         <h1>SE</h1>
       </div>
 

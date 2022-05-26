@@ -61,6 +61,17 @@
     animation: fade .3s linear;
 }
 
+.Loader__progress {
+    position: absolute;
+    font-size: 2rem;
+    color: var(--primary-color);
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Monoton', cursive;;
+}
+
 @keyframes rotate {
     from{
         transform: rotate(0deg);

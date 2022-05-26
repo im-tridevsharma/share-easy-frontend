@@ -30,7 +30,7 @@
     border: none;
 }
 
-.Navigation__link_item:hover a {
+.Navigation__link_item:hover a, .Navigation__link_item.active a {
     color: var(--primary-color)!important;
 }
 

@@ -35,7 +35,7 @@ const HomePage = () => {
       </Head>
 
       <div className={styles.App_logo}>
-        <Image src="/logo.png" alt="share easy" width="80" height="80" />
+        <Image src="/logo.png" alt="share easy" width="60" height="60" />
         <h1>SE</h1>
       </div>
 
