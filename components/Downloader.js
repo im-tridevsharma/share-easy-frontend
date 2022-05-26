@@ -45,7 +45,7 @@ function Downloader({ token, fileinfo }) {
         setIsDone(false);
       }, 1000);
     } else {
-      const res = await downloadFile(token);
+      const res = await downloadFile(token, setProgress);
 
       const path = window.URL.createObjectURL(new Blob([res]));
       const link = document.createElement("a");
