@@ -6,6 +6,7 @@ import Navigation from "../components/Navigation";
 
 import styles from "../styles/Page.module.css";
 import app_styles from "../styles/Home.module.css";
+import Footer from "../components/Footer";
 
 function Personal() {
   return (
@@ -73,7 +74,9 @@ function Personal() {
           </p>
         </div>
       </div>
-      <div className={styles.Page__footer}></div>
+      <div className={styles.Page__footer}>
+        <Footer />
+      </div>
     </div>
   );
 }

@@ -8,11 +8,11 @@ import styles from "../styles/Page.module.css";
 import app_styles from "../styles/Home.module.css";
 import Footer from "../components/Footer";
 
-function About() {
+function Terms() {
   return (
     <div className={styles.Page__container}>
       <Head>
-        <title>About Us</title>
+        <title>Terms and Conditions</title>
       </Head>
       <div className={app_styles.App_navigation}>
         <Link href="/">
@@ -25,12 +25,12 @@ function About() {
       </div>
       <div className={styles.Page__main}>
         <div className={styles.Page__main_title}>
-          <h1>About Us</h1>
+          <h1>Terms and Conditions</h1>
         </div>
 
         <div className={styles.Page__main_content}>
           <p>
-            About Ipsum is simply dummy text of the printing and typesetting
+            Terms Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
@@ -60,7 +60,7 @@ function About() {
           </p>
 
           <p>
-            About Ipsum is simply dummy text of the printing and typesetting
+            Terms Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
@@ -81,4 +81,4 @@ function About() {
   );
 }
 
-export default About;
+export default Terms;

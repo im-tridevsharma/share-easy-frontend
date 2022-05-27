@@ -68,9 +68,15 @@
 }
 
 .Page__footer {
-    padding: 2rem;
+    padding: 2rem 4.2rem;
     background-color: rgba(255, 255, 255, .1);
     margin-top: 1rem;
+}
+
+@media screen and (max-width:900px) {
+    .Page__footer {
+        padding: 2rem 1.2rem;
+    }
 }
 
 @keyframes appear {

@@ -16,7 +16,7 @@ import Link from "../components/Link";
 import Paste from "../components/Paste";
 import QrCode from "../components/QrCode";
 
-const HomePage = () => {
+const HomePage = (props) => {
   const [action, setAction] = React.useState("file");
 
   React.useEffect(() => {
@@ -26,6 +26,8 @@ const HomePage = () => {
         (adsbygoogle = window.adsbygoogle || []).push({});
       } catch (e) {}
     }
+
+    console.log(props);
   }, []);
 
   return (
@@ -95,6 +97,12 @@ const HomePage = () => {
       </div>
     </>
   );
+};
+
+HomePage.getInitialProps = async (ctx) => {
+  return {
+    _s: ctx?.query?._s,
+  };
 };
 
 export default HomePage;
