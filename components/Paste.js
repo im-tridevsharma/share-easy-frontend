@@ -53,7 +53,6 @@ function Paste() {
         setLink(res?.link);
         setMessage("Congratulations! You have successfully saved your notes.");
       }, 1000);
-      console.log(formdata);
     } else {
       setWarning(res?.message);
       setIsLoading(false);
@@ -62,22 +61,15 @@ function Paste() {
 
   return (
     <>
-      <Toaster
-        text={warning}
-        type="error"
-        active={warning !== ""}
-        position="bottom-right"
-      />
+      <Toaster text={warning} active={warning !== ""} callback={setWarning} />
       {(isLoading || isDone) && <Loader loading={isLoading} done={isDone} />}
       {link && (
         <GeneratedLink
           message={message}
           link={link}
           callback={() => {
-            setTimeout(() => {
-              setLink("");
-              setMessage("");
-            }, 1000);
+            setLink("");
+            setMessage("");
             setUploadData({
               note: "",
               burn: false,

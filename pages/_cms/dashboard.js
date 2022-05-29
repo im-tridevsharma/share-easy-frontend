@@ -8,7 +8,6 @@ import styles from "../../styles/_cms/Dashboard.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPager,
-  faBlog,
   faLinkSlash,
   faNoteSticky,
   faFileAlt,
@@ -32,13 +31,7 @@ function Dashboard() {
                 <p>01</p>
               </div>
             </div>
-            <div className={styles.Dashboard__item}>
-              <h2>Blogs</h2>
-              <div className={styles.Dashboard__item_info}>
-                <FontAwesomeIcon icon={faBlog} width={30} />
-                <p>01</p>
-              </div>
-            </div>
+
             <div className={styles.Dashboard__item}>
               <h2>Files</h2>
               <div className={styles.Dashboard__item_info}>

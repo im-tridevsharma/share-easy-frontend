@@ -27,7 +27,7 @@ const HomePage = (props) => {
       } catch (e) {}
     }
 
-    console.log(props);
+    setAction(props?.action || "file");
   }, []);
 
   return (
@@ -48,7 +48,7 @@ const HomePage = (props) => {
       <div className={styles.App_action}>
         {action === "file" && <UploadFile />}
         {action === "link" && <Link />}
-        {action === "paste" && <Paste />}
+        {action === "note" && <Paste />}
         {action === "qrcode" && <QrCode />}
       </div>
 
@@ -66,8 +66,8 @@ const HomePage = (props) => {
           <FontAwesomeIcon icon={faLink} />
         </p>
         <p
-          onClick={() => setAction("paste")}
-          className={action === "paste" ? styles.active : ""}
+          onClick={() => setAction("note")}
+          className={action === "note" ? styles.active : ""}
         >
           <FontAwesomeIcon icon={faPaste} />
         </p>
@@ -101,7 +101,7 @@ const HomePage = (props) => {
 
 HomePage.getInitialProps = async (ctx) => {
   return {
-    _s: ctx?.query?._s,
+    action: ctx?.query?._s,
   };
 };
 

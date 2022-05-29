@@ -35,9 +35,6 @@ function UploadFile() {
       );
     } else {
       setWarning("Please select file below 200MB.");
-      setTimeout(() => {
-        setWarning("");
-      }, 5000);
     }
   };
 
@@ -92,12 +89,7 @@ function UploadFile() {
 
   return (
     <>
-      <Toaster
-        text={warning}
-        type="error"
-        active={warning !== ""}
-        position="bottom-right"
-      />
+      <Toaster text={warning} active={warning !== ""} callback={setWarning} />
       {(isLoading || isDone) && (
         <Loader progress={progress} loading={isLoading} done={isDone} />
       )}
@@ -106,10 +98,8 @@ function UploadFile() {
           message={message}
           link={link}
           callback={() => {
-            setTimeout(() => {
-              setLink("");
-              setMessage("");
-            }, 1000);
+            setLink("");
+            setMessage("");
             setUploadData({
               files: [],
               burn: false,

@@ -25,9 +25,6 @@ function Downloader({ token, fileinfo }) {
       const res = await checkPassword({ fileId: fileinfo?.fileId, password });
       if (res?.msg) {
         setWarning(res?.msg);
-        setTimeout(() => {
-          setWarning("");
-        }, 1000);
       } else if (res?.token) {
         const download = await downloadFile(res?.token, setProgress);
         const path = window.URL.createObjectURL(new Blob([download]));
@@ -65,12 +62,7 @@ function Downloader({ token, fileinfo }) {
 
   return (
     <div className={styles.Downloader}>
-      <Toaster
-        text={warning}
-        type="error"
-        active={warning !== ""}
-        position="bottom-right"
-      />
+      <Toaster text={warning} active={warning !== ""} callback={setWarning} />
       {(isLoading || isDone) && (
         <Loader progress={progress} loading={isLoading} done={isDone} />
       )}

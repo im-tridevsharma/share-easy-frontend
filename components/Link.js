@@ -5,6 +5,7 @@ import styles from "../styles/Link.module.css";
 import { shortenLink } from "../apis/link";
 import GeneratedLink from "./GeneratedLink";
 import Loader from "./Loader";
+import { isValidLink } from "../utils/_helper_functions";
 
 function Link() {
   const [error, setError] = React.useState("");
@@ -25,6 +26,12 @@ function Link() {
 
   const submitData = async (e) => {
     e.preventDefault();
+
+    if (!isValidLink(uploadData)) {
+      setError("Provided link is not a valid link!");
+      return;
+    }
+
     setIsLoading(true);
     const formdata = {
       isBurn: false,
@@ -50,22 +57,15 @@ function Link() {
 
   return (
     <>
-      <Toaster
-        text={error}
-        type="error"
-        active={error !== ""}
-        position="bottom-right"
-      />
+      <Toaster text={error} active={error !== ""} callback={setError} />
       {(isLoading || isDone) && <Loader loading={isLoading} done={isDone} />}
       {link && (
         <GeneratedLink
           message={message}
           link={link}
           callback={() => {
-            setTimeout(() => {
-              setLink("");
-              setMessage("");
-            }, 1000);
+            setLink("");
+            setMessage("");
             setUploadData("");
           }}
         />

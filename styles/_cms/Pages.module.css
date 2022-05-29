@@ -20,7 +20,8 @@
 
 .Pages__card {
     padding: .5rem;
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: .5rem;
 }
 
 .Pages__card_header {
@@ -29,6 +30,7 @@
     align-items: center;
     justify-content: space-between;
     padding: .5rem;
+    border-radius: .5rem;
 }
 
 .Pages__card_header_action {
@@ -48,13 +50,64 @@
 .Pages__table {
     width: 100%;
     display: table;
+    font-family: 'Didact Gothic', sans-serif;
 }
 
 .Pages__table thead {
-    font-family: 'Didact Gothic', sans-serif;
-    background: #fff;
+    background-color: rgba(255, 255, 255, .1);
+    color: #fff;
 }
 
 .Pages__table thead tr th {
     padding: .8rem 0;
+}
+
+
+.Pages__table tbody tr td {
+    padding: .8rem 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5rem;
+    color: #fff;
+}
+
+.Pages__icon {
+    width: 1rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.Pages__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.Pages__container h3 {
+    color: #fff;
+}
+
+.Pages__form_con {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.Pages__form label {
+    margin: 5px 0;
+    color: #fff;
+}
+
+.Pages__form input,.Pages__form textarea {
+    padding: .5rem;
+    border-radius: .3rem;
+    border: none;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    outline: none;
+    height: 50px;
+}
+
+.Pages__form textarea {
+    resize: vertical;
 }

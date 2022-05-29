@@ -4,9 +4,10 @@ import React from "react";
 import Header from "../../../components/_cms/Header";
 import Sidebar from "../../../components/_cms/Sidebar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlusSquare } from "@fortawesome/free-solid-svg-icons";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../../../styles/_cms/Pages.module.css";
+import data from "../../../utils/data.json";
 
 function Pages() {
   return (
@@ -19,31 +20,30 @@ function Pages() {
         <Header />
         <div className={styles.Pages__container}>
           <div className={styles.Pages__card}>
-            <div className={styles.Pages__card_header}>
-              <div className=""></div>
-              <Link href="/_cms/pages/add">
-                <a className={styles.Pages__card_header_action}>
-                  <FontAwesomeIcon icon={faPlusSquare} />
-                </a>
-              </Link>
-            </div>
             <div className={styles.Pages__card_body}>
               <table className={styles.Pages__table}>
                 <thead>
                   <tr>
                     <th>Page Title</th>
-                    <th>Create Date</th>
-                    <th>Update Date</th>
+                    <th>Date</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                  </tr>
+                  {data?.pages?.map((item, key) => (
+                    <tr key={key}>
+                      <td>{item?.replace("-", " ").toUpperCase()}</td>
+                      <td></td>
+                      <td>
+                        <Link href={"pages/" + item}>
+                          <FontAwesomeIcon
+                            icon={faEdit}
+                            className={styles.Pages__icon}
+                          />
+                        </Link>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>

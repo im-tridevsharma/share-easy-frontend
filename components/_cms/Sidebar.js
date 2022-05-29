@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faDharmachakra,
   faPager,
-  faBlog,
   faLinkSlash,
   faNoteSticky,
 } from "@fortawesome/free-solid-svg-icons";
@@ -18,13 +17,13 @@ function Sidebar() {
   const router = useRouter();
 
   useEffect(() => {
-    document
-      .querySelector(".Sidebar_active__Aqh0Z")
-      .scrollIntoView({
+    if (document.querySelector(".Sidebar_active__Aqh0Z")) {
+      document.querySelector(".Sidebar_active__Aqh0Z").scrollIntoView({
         behavior: "smooth",
         block: "center",
         inline: "center",
       });
+    }
   }, [router?.asPath]);
 
   return (
@@ -56,7 +55,8 @@ function Sidebar() {
             <a
               className={
                 router?.asPath === "/_cms/pages" ||
-                router?.asPath === "/_cms/pages/add"
+                (router?.asPath?.split("/").length > 3 &&
+                  router?.asPath?.split("/")[2] === "pages")
                   ? styles.active
                   : ""
               }
@@ -69,19 +69,7 @@ function Sidebar() {
             </a>
           </Link>
         </li>
-        <li>
-          <Link href="/_cms/blogs">
-            <a
-              className={router?.asPath === "/_cms/blogs" ? styles.active : ""}
-            >
-              <FontAwesomeIcon
-                icon={faBlog}
-                className={styles.Sidebar__nav_icon}
-              />
-              Blogs
-            </a>
-          </Link>
-        </li>
+
         <li>
           <Link href="/_cms/files">
             <a
