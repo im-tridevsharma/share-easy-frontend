@@ -29,10 +29,10 @@
             "icons" : [{"src": "pages.png","type": "image/png","sizes": "192x192"}]
         },
         {
-            "name" : "CMS Blogs",
-            "short_name" : "Blogs",
-            "description" : "Blogs",
-            "url" : "/_cms/blogs",
+            "name" : "CMS Files",
+            "short_name" : "Files",
+            "description" : "Files",
+            "url" : "/_cms/files",
             "icons" : [{"src": "blogs.png","type": "image/png","sizes": "192x192"}]
         }
     ],

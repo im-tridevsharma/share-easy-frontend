@@ -111,3 +111,17 @@
 .Pages__form textarea {
     resize: vertical;
 }
+
+.Pages__form button {
+    padding: .8rem 1rem;
+    border: none;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: .5rem;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.Pages__form button:hover {
+    background-color: rgba(0, 0, 0, .8);
+}

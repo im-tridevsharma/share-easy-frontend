@@ -36,10 +36,12 @@ function Pages() {
                       <td></td>
                       <td>
                         <Link href={"pages/" + item}>
-                          <FontAwesomeIcon
-                            icon={faEdit}
-                            className={styles.Pages__icon}
-                          />
+                          <a>
+                            <FontAwesomeIcon
+                              icon={faEdit}
+                              className={styles.Pages__icon}
+                            />
+                          </a>
                         </Link>
                       </td>
                     </tr>
