@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import Navigation from "../components/Navigation";
 import UploadFile from "../components/UploadFile";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +10,7 @@ import {
   faLink,
   faPaste,
   faQrcode,
+  faRecordVinyl,
 } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "../styles/Home.module.css";
@@ -18,6 +20,7 @@ import QrCode from "../components/QrCode";
 
 const HomePage = (props) => {
   const [action, setAction] = React.useState("file");
+  const router = useRouter();
 
   React.useEffect(() => {
     var ads = document.getElementsByClassName("adsbygoogle").length;
@@ -70,6 +73,9 @@ const HomePage = (props) => {
           className={action === "note" ? styles.active : ""}
         >
           <FontAwesomeIcon icon={faPaste} />
+        </p>
+        <p onClick={() => router.push("/recording")}>
+          <FontAwesomeIcon icon={faRecordVinyl} />
         </p>
         {false && (
           <p

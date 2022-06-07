@@ -11,6 +11,7 @@ import Footer from "../components/Footer";
 function Recording() {
   const [isRecording, setIsRecording] = React.useState(false);
   const [isRecorded, setIsRecorded] = React.useState(false);
+  const [src, setSrc] = React.useState("");
 
   const video = React.useRef();
   const recorder = React.useRef();
@@ -41,9 +42,9 @@ function Recording() {
             stream.getTracks().forEach((track) => {
               track.stop();
             });
+            setIsRecorded(true);
             saveFile(dataChunks);
             dataChunks = [];
-            setIsRecorded(true);
           };
         });
     } else {
@@ -65,10 +66,11 @@ function Recording() {
       downloadLink = document.createElement("a");
     downloadLink.href = URL.createObjectURL(blob);
     downloadLink.download = `${filename}.webm`;
+    video.current.src = URL.createObjectURL(blob);
 
     document.body.appendChild(downloadLink);
     downloadLink.click();
-    video.current.src = downloadLink;
+    setSrc(downloadLink);
     URL.revokeObjectURL(blob);
     document.body.removeChild(downloadLink);
   }
@@ -99,6 +101,7 @@ function Recording() {
               width: "100%",
               margin: "1rem auto",
               border: "1px solid #fff",
+              display: src ? "block" : "none",
             }}
           >
             <video
@@ -108,6 +111,7 @@ function Recording() {
               ref={video}
             />
           </div>
+
           <div
             style={{
               maxWidth: "500px",
